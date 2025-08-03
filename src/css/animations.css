@@ -1,0 +1,16 @@
+@keyframes borderGlow {
+    0% {
+      box-shadow: 0 0 0px aqua, inset 0 0 0px aqua;
+    }
+    50% {
+      box-shadow: 0 0 12px aqua, inset 0 0 12px aqua;
+    }
+    100% {
+      box-shadow: 0 0 0px aqua, inset 0 0 0px aqua;
+    }
+  }
+  
+  .border-glow {
+    animation: borderGlow 2s infinite;
+  }
+  

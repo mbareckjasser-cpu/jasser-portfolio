@@ -1,0 +1,48 @@
+/* @property --angle {
+    syntax: "<angle>";
+    initial-value: 53deg;
+    inherits: false;
+  }
+  
+  @keyframes glowing-border {
+    from {
+      --angle: 53deg;
+    }
+    to {
+      --angle: 413deg;
+    }
+  }
+  
+  .box::before,
+  .box::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 1rem;
+    z-index: -1;
+    background: conic-gradient(from var(--angle), #0c63e7, #060c21, #d11149, #060c21, #0c63e7);
+  }
+  
+  .box::after {
+    z-index: -2;
+    filter: blur(20px);
+  }
+  
+  .box:hover::before,
+  .box:hover::after {
+    animation: glowing-border 3.5s linear infinite;
+  }
+  
+  .box:hover::after {
+    animation: glowing-border 3.5s linear infinite, blur-effect 3.5s linear infinite;
+  }
+  
+  @keyframes blur-effect {
+    from {
+      filter: blur(20px);
+    }
+    to {
+      filter: blur(19px);
+    }
+  }
+   */
