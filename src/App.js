@@ -1,5 +1,4 @@
 import React from 'react';
-// Imports des composants
 import Navbar from './components/Navbar';
 import About from './components/Aboutt';
 import SkillsPage from './components/skills';
@@ -8,48 +7,72 @@ import ServicesSection from './components/service';
 import ContactPage from './components/ContactPage';
 import Footer from './components/footer';
 import "./css/BackgroundSmoke.css";
-// import Projects from './components/projects';
 import ProjectsCardsInfinite from './components/ProjectsCardsInfinitt.tsx';
-import TestimonialCarousel from './components/pr.jsx'
 
 function App() {
   return (
     <div className="relative min-h-screen text-white overflow-x-hidden max-w-full">
-      <div className="smoke-background" />
+
+      {/* ── Ambient background layer ── */}
+      <div className="smoke-background" aria-hidden="true">
+        {/* Grid overlay rendered as a child div for clarity */}
+        <div className="grid-overlay" />
+      </div>
+
+      {/* ── Sticky navigation ── */}
       <Navbar />
 
+      {/* ── Main content ── */}
       <main className="relative z-10">
 
-        <section id="Home">
+        {/* Hero / About */}
+        <section id="Home" className="relative">
           <About />
         </section>
 
-        <section id="aboutme">
+        {/* Hairline divider */}
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* About Me */}
+        <section id="aboutme" className="relative">
           <AboutMe />
         </section>
 
-        <section id="skills">
-          <SkillsPage />
-        </section>
-
-        <section id="Services">
+        <div className="section-divider" aria-hidden="true" />
+        <section id="Services" className="relative">
           <ServicesSection />
         </section>
 
-        <section id="Projects">
+        {/* Skills */}
+        <section id="skills" className="relative">
+          <SkillsPage />
+        </section>
+
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* Services */}
+
+
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* Projects */}
+        <section id="Projects" className="relative">
           <ProjectsCardsInfinite />
         </section>
 
-        <section id="ContactPage">
+        <div className="section-divider" aria-hidden="true" />
+
+        {/* Contact */}
+        <section id="ContactPage" className="relative">
           <ContactPage />
         </section>
 
       </main>
 
+      {/* ── Footer ── */}
       <Footer />
     </div>
   );
 }
-
 
 export default App;
