@@ -83,7 +83,7 @@ const Footer = () => {
           {NAV_LINKS.map((text, index) => (
             <a
               key={index}
-              href="#"
+              href="#Home"
               className="relative text-[11px] font-semibold uppercase tracking-[0.15em] text-white/35 hover:text-white transition-colors duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/60 rounded"
             >
               {text}

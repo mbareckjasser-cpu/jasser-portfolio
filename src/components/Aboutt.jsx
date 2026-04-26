@@ -142,7 +142,6 @@ export function About() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollEffect = scrollY / 0; // original logic preserved
 
   const textVariants = {
     hidden: { opacity: 0, y: 24 },

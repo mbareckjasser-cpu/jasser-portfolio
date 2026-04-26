@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from 'emailjs-com';
-import { FiSend, FiUser, FiMail, FiPhone, FiMessageSquare, FiTag } from "react-icons/fi";
+import { FiSend, FiUser, FiMail, FiPhone, FiTag } from "react-icons/fi";
 
 /* ─── Floating Label Input ─────────────────────────────────────────── */
 const InputField = ({ label, name, type = "text", value, onChange, error, icon: Icon }) => (
